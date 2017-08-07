@@ -4,6 +4,40 @@ Exercises from [sqlcourse.com](http://www.sqlcourse.com).
 
 ## Snippets
 
+Code used for these exercises.
+
+### Comparison Operators
+
+```
+=     -- Equal
+>     -- Greater than
+<     -- Less than
+>=    -- Greater than or equal
+<=    -- Less than or equal
+<>    -- Not equal to
+LIKE  -- Compare a value to similar values using wild card operators
+```
+
+When using `LIKE`, the percent sign `%` can be used as a wild card to match any character that might appear before or after the characters specified.
+
+#### Examples:
+
+##### Display the first and last names for everyone whose last name ends in an "ay".
+
+```
+SELECT first, last
+  FROM empinfo
+ WHERE last LIKE '%ay';
+```
+
+##### Select first name, last name, and salary for anyone with "Programmer" in their title.
+
+```
+SELECT firstname, lastname, salary
+  FROM employees_jnd2017
+ WHERE title LIKE '%Programmer%';
+```
+
 ### Selecting Data
 
 ```
