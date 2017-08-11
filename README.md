@@ -1,6 +1,6 @@
 # SQLCourse
 
-Exercises from [sqlcourse.com](http://www.sqlcourse.com).
+SQL exercises from [sqlcourse.com](http://www.sqlcourse.com).
 
 ## Snippets
 
@@ -22,17 +22,17 @@ When using `LIKE`, the percent sign `%` can be used as a wild card to match any 
 
 #### Examples:
 
-##### Display the first and last names for everyone whose last name ends in an "ay".
+Display the first and last names for everyone whose last name ends in an "ay".
 
-```
+```sql
 SELECT first, last
   FROM empinfo
  WHERE last LIKE '%ay';
 ```
 
-##### Select first name, last name, and salary for anyone with "Programmer" in their title.
+Select first name, last name, and salary for anyone with "Programmer" in their title.
 
-```
+```sql
 SELECT firstname, lastname, salary
   FROM employees_jnd2017
  WHERE title LIKE '%Programmer%';
@@ -40,7 +40,7 @@ SELECT firstname, lastname, salary
 
 ### Selecting Data
 
-```
+```sql
 SELECT first, last, city
   FROM empinfo
  WHERE city <> 'Payson';
@@ -48,7 +48,7 @@ SELECT first, last, city
 
 ### Creating Tables
 
-```
+```sql
 CREATE TABLE employees_jnd2017
             (firstname VARCHAR(15),
              lastname  VARCHAR(20),
@@ -59,7 +59,7 @@ CREATE TABLE employees_jnd2017
 
 ### Inserting Into a Table
 
-```
+```sql
 INSERT INTO employees_jnd2017
             (firstname, lastname, title, age, salary)
      values ('Jonie', 'Weber', 'Secretary', 28, 19500);
@@ -67,7 +67,7 @@ INSERT INTO employees_jnd2017
 
 ### Updating Records
 
-```
+```sql
 UPDATE employees_jnd2017
    SET lastname = 'Weber-Williams'
  WHERE firstname = 'Jonie' AND lastname = 'Weber';
@@ -75,14 +75,14 @@ UPDATE employees_jnd2017
 
 ### Deleting Records
 
-```
+```sql
 DELETE FROM employees_jnd2017
       WHERE firstname = 'Jonie'
         AND lastname = 'Weber-Williams';
 ```
 
-### Drop a Table
+### Dropping a Table
 
-```
+```sql
 DROP TABLE employees_jnd2017;
 ```
